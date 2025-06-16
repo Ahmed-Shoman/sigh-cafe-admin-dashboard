@@ -5,6 +5,7 @@ namespace App\Filament\Resources\PreparationProcessResource\Pages;
 use App\Filament\Resources\PreparationProcessResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
+use EditRecord\Concerns\Translatable;
 
 class ListPreparationProcesses extends ListRecords
 {
@@ -14,6 +15,8 @@ class ListPreparationProcesses extends ListRecords
     {
         return [
             Actions\CreateAction::make(),
+            Actions\LocaleSwitcher::make(),
+
         ];
     }
 }

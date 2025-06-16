@@ -5,6 +5,8 @@ namespace App\Filament\Resources\StatisticSectionResource\Pages;
 use App\Filament\Resources\StatisticSectionResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
+use EditRecord\Concerns\Translatable;
+
 
 class ListStatisticSections extends ListRecords
 {
@@ -14,6 +16,8 @@ class ListStatisticSections extends ListRecords
     {
         return [
             Actions\CreateAction::make(),
+            Actions\LocaleSwitcher::make(),
+
         ];
     }
 }

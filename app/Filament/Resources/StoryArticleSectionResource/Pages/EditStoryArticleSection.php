@@ -5,6 +5,7 @@ namespace App\Filament\Resources\StoryArticleSectionResource\Pages;
 use App\Filament\Resources\StoryArticleSectionResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
+use EditRecord\Concerns\Translatable;
 
 class EditStoryArticleSection extends EditRecord
 {
@@ -14,6 +15,8 @@ class EditStoryArticleSection extends EditRecord
     {
         return [
             Actions\DeleteAction::make(),
+            Actions\LocaleSwitcher::make(),
+
         ];
     }
 }

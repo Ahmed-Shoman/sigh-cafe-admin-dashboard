@@ -5,6 +5,7 @@ namespace App\Filament\Resources\OpinionSectionResource\Pages;
 use App\Filament\Resources\OpinionSectionResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
+use EditRecord\Concerns\Translatable;
 
 class EditOpinionSection extends EditRecord
 {
@@ -14,6 +15,8 @@ class EditOpinionSection extends EditRecord
     {
         return [
             Actions\DeleteAction::make(),
+            Actions\LocaleSwitcher::make(),
+
         ];
     }
 }

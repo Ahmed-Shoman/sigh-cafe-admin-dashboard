@@ -5,6 +5,8 @@ namespace App\Filament\Resources\SettingResource\Pages;
 use App\Filament\Resources\SettingResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
+use EditRecord\Concerns\Translatable;
+
 
 class ListSettings extends ListRecords
 {
@@ -14,6 +16,8 @@ class ListSettings extends ListRecords
     {
         return [
             Actions\CreateAction::make(),
+            Actions\LocaleSwitcher::make(),
+
         ];
     }
 }

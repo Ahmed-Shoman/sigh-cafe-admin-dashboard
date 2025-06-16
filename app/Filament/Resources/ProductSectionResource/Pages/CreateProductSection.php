@@ -9,4 +9,12 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateProductSection extends CreateRecord
 {
     protected static string $resource = ProductSectionResource::class;
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\LocaleSwitcher::make(),
+
+        ];
+}
+
 }

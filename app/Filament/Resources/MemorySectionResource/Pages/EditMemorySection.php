@@ -5,6 +5,7 @@ namespace App\Filament\Resources\MemorySectionResource\Pages;
 use App\Filament\Resources\MemorySectionResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
+use EditRecord\Concerns\Translatable;
 
 class EditMemorySection extends EditRecord
 {
@@ -14,6 +15,8 @@ class EditMemorySection extends EditRecord
     {
         return [
             Actions\DeleteAction::make(),
+            Actions\LocaleSwitcher::make(),
+
         ];
     }
 }

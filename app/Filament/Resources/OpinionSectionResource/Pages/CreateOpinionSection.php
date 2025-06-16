@@ -9,4 +9,12 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateOpinionSection extends CreateRecord
 {
     protected static string $resource = OpinionSectionResource::class;
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\LocaleSwitcher::make(),
+
+        ];
+}
+
 }

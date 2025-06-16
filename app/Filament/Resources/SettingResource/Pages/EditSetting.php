@@ -5,6 +5,7 @@ namespace App\Filament\Resources\SettingResource\Pages;
 use App\Filament\Resources\SettingResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
+use EditRecord\Concerns\Translatable;
 
 class EditSetting extends EditRecord
 {
@@ -14,6 +15,8 @@ class EditSetting extends EditRecord
     {
         return [
             Actions\DeleteAction::make(),
+            Actions\LocaleSwitcher::make(),
+
         ];
     }
 }

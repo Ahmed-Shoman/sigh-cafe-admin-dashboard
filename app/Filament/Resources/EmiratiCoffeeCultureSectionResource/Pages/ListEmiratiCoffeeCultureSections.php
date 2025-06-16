@@ -5,6 +5,7 @@ namespace App\Filament\Resources\EmiratiCoffeeCultureSectionResource\Pages;
 use App\Filament\Resources\EmiratiCoffeeCultureSectionResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
+use EditRecord\Concerns\Translatable;
 
 class ListEmiratiCoffeeCultureSections extends ListRecords
 {
@@ -14,6 +15,8 @@ class ListEmiratiCoffeeCultureSections extends ListRecords
     {
         return [
             Actions\CreateAction::make(),
+            Actions\LocaleSwitcher::make(),
+
         ];
     }
 }

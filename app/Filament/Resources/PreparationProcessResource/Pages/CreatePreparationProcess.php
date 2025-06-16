@@ -9,4 +9,12 @@ use Filament\Resources\Pages\CreateRecord;
 class CreatePreparationProcess extends CreateRecord
 {
     protected static string $resource = PreparationProcessResource::class;
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\LocaleSwitcher::make(),
+
+        ];
+}
+
 }

@@ -5,6 +5,7 @@ namespace App\Filament\Resources\StoryArticleSectionResource\Pages;
 use App\Filament\Resources\StoryArticleSectionResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
+use EditRecord\Concerns\Translatable;
 
 class ListStoryArticleSections extends ListRecords
 {
@@ -14,6 +15,8 @@ class ListStoryArticleSections extends ListRecords
     {
         return [
             Actions\CreateAction::make(),
+            Actions\LocaleSwitcher::make(),
+
         ];
     }
 }

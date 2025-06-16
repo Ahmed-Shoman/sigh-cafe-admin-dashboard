@@ -5,6 +5,7 @@ namespace App\Filament\Resources\HeroSectionResource\Pages;
 use App\Filament\Resources\HeroSectionResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
+use EditRecord\Concerns\Translatable;
 
 class ListHeroSections extends ListRecords
 {
@@ -14,6 +15,8 @@ class ListHeroSections extends ListRecords
     {
         return [
             Actions\CreateAction::make(),
+            Actions\LocaleSwitcher::make(),
+
         ];
     }
 }

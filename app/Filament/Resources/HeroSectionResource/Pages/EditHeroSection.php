@@ -5,6 +5,7 @@ namespace App\Filament\Resources\HeroSectionResource\Pages;
 use App\Filament\Resources\HeroSectionResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
+use EditRecord\Concerns\Translatable;
 
 class EditHeroSection extends EditRecord
 {
@@ -14,6 +15,8 @@ class EditHeroSection extends EditRecord
     {
         return [
             Actions\DeleteAction::make(),
+            Actions\LocaleSwitcher::make(),
+
         ];
     }
 }

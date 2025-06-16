@@ -5,6 +5,7 @@ namespace App\Filament\Resources\MemorySectionResource\Pages;
 use App\Filament\Resources\MemorySectionResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
+use EditRecord\Concerns\Translatable;
 
 class ListMemorySections extends ListRecords
 {
@@ -14,6 +15,8 @@ class ListMemorySections extends ListRecords
     {
         return [
             Actions\CreateAction::make(),
+            Actions\LocaleSwitcher::make(),
+
         ];
     }
 }
